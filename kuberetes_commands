@@ -39,3 +39,11 @@ kubectl describe deployment nginx-deployment
 
 To watch the any events:
 kubectl get pods --watch
+
+------
+when a EC2 VM is increased in size: run the below two commands in linux
+lsblk - to list volumes and partitions
+sudo growpart /dev/xvda 1
+sudo resize2fs /dev/xvda1
+df -kh
+
